@@ -1,0 +1,9 @@
+{
+  "name": "pm-os",
+  "description": "Product discovery for aspiring PMs: Product Hunt scans, Reddit pain points, competitor teardowns",
+  "version": "0.1.0",
+  "author": {
+    "name": "Subir Paul"
+  },
+  "license": "MIT"
+}

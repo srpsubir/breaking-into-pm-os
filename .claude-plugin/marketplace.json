@@ -1,0 +1,14 @@
+{
+  "name": "breaking-into-pm-os",
+  "description": "A product discovery toolkit for people breaking into product management",
+  "owner": {
+    "name": "Subir Paul"
+  },
+  "plugins": [
+    {
+      "name": "pm-os",
+      "source": "./plugins/pm-os",
+      "description": "Scan Product Hunt, mine Reddit for pain points, and tear down competitors, all from Claude Code"
+    }
+  ]
+}
