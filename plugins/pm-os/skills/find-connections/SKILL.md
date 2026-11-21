@@ -21,11 +21,14 @@ This skill reads LinkedIn pages in the user's own browser session. It never send
 
 For each company, one at a time:
 
-1. Go to LinkedIn people search and search the company name. Use LinkedIn's own filters: Connections = 2nd, and Current company = the company. Choose the company from LinkedIn's suggestion list so you filter by the real company page and not by keyword. Add the role keywords if given.
+1. Find the company's LinkedIn id. Search the company name under Companies, open its page, and click the "N connections work here" line. That opens a people search whose address contains `currentCompany=%5B%22<id>%22%5D`. Note the id.
+   Then open the 2nd-degree search for that company (tested):
+   `https://www.linkedin.com/search/results/people/?network=%5B%22S%22%5D&currentCompany=%5B%22<id>%22%5D`
+   Add `&keywords=<role>` if the user gave role keywords. If the search address does not carry the id, use LinkedIn's own filters instead (Connections = 2nd, Current company = the company page from the suggestion list).
 2. Read the first page of results (about 10 people). For each person capture:
    - Name, headline, location, profile URL
    - The mutual-connection line LinkedIn shows (for example "Anna Schmidt and 4 other mutual connections")
-3. The result card names only one or two mutual connections. For people you will list, open the "mutual connections" link to get the first-degree names, and take up to three. If LinkedIn does not show them, write "not shown". Do not guess.
+3. The result card names only two mutual connections ("A, B & 8 other mutual connections"). For some results the wording is "A & B are mutual connections" and there is no link. For people you will list, click the "N other mutual connections" link. It opens a list of the first-degree people who connect the user to that person (tested: the list matched the count). Take up to three names. Prefer ones the user knows well, but only from what is on screen. If LinkedIn does not show them, write "not shown". Do not guess.
 4. Keep the pace human. Pause a few seconds between pages. Visit at most 15 profile or result pages per company. Do not paginate beyond page 2.
 5. If LinkedIn shows a login wall, a verification check, or a warning about unusual activity: stop at once, tell the user, and do not continue or work around it.
 
