@@ -30,6 +30,7 @@ Details are in `plugins/pm-os/docs/`.
 - `/pm-os:scan-category` finds what has launched in a category and what got traction.
 - `/pm-os:pain-points` finds what people complain about on Reddit.
 - `/pm-os:competitor-teardown` compares a few products side by side.
+- `/pm-os:find-connections` finds your second-degree LinkedIn connections at target companies and who can introduce you. It uses Claude in Chrome (see `plugins/pm-os/docs/get-claude-in-chrome.md`), not Apify.
 - `/pm-os:setup-check` tests that everything is connected.
 
 ## For AI agents reading this file
